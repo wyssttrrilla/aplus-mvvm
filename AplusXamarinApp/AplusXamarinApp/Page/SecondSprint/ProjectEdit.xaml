@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AplusXamarinApp.Page.SecondSprint.ProjectEdit"
+             Title="
+       Изменить проект">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="trash.png" Priority="0" Order="Primary" x:Name="TEditingProject" Clicked="TEditingProject_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout VerticalOptions="Center" Margin="0, 15, 0, 0">
+                <Entry Placeholder="Имя проекта" 
+                           PlaceholderColor="Gray"  
+                           x:Name="ProjectName" 
+                           Text="{Binding ProjectName}"
+                           BackgroundColor="#e8e8e8"
+                           HeightRequest="55"
+                           Margin="40, 7, 40, 0"
+                           Visual="Material"
+                           TextColor="Black"/>
+
+                <Editor HeightRequest="200"
+                           Placeholder="Описание"
+                           x:Name="EDTitle" 
+                           TextColor="Black"
+                           Text="{Binding ProjectTitle}"
+                           Margin="40,15, 40, 0"
+                           BackgroundColor="#e8e8e8"/>
+
+                <Entry Placeholder="Телефон №1"
+                           Margin="40,15,40,0"
+                           PlaceholderColor="Gray"
+                           TextColor="Black"
+                           Text="{Binding ProjectPhone}"
+                           x:Name="EPhoneOne"                          
+                           BackgroundColor="#e8e8e8"
+                           HeightRequest="55"
+                           Visual="Material"/>
+
+                <Entry Placeholder="E-mail"
+                           Margin="40,20,40,0"
+                           PlaceholderColor="Gray"
+                           TextColor="Black"
+                           Text="{Binding ProjectEmail}"
+                           x:Name="EEmail"                           
+                           BackgroundColor="#e8e8e8"
+                           HeightRequest="55"
+                           Visual="Material"/>
+
+                <Entry Placeholder="Адресс"
+                           Margin="40,15,40,0"
+                           PlaceholderColor="Gray"
+                           TextColor="Black"
+                           Text="{Binding ProjectAddress}"
+                           x:Name="EAddress"                          
+                           BackgroundColor="#e8e8e8"
+                           HeightRequest="55"
+                           Visual="Material"/>
+                
+                <FlexLayout Direction="Row" JustifyContent="Center" HorizontalOptions="Center">
+                    <Button Text="Отмена" 
+                        CornerRadius="200" 
+                        BackgroundColor="#00b2ff" 
+                        TextColor="White" 
+                        x:Name="BRemove" 
+                        Clicked="BRemove_Clicked"
+                        HeightRequest="49"
+                        WidthRequest="149"
+                        FontSize="15"
+                        VerticalOptions="End"
+                        Margin="0, 30, 10, 0"/>
+
+                    <Button Text="Изменить" 
+                        CornerRadius="200" 
+                        BackgroundColor="#00b2ff" 
+                        TextColor="White" 
+                        x:Name="BChange" 
+                        Clicked="BChange_Clicked"                      
+                        HeightRequest="49"
+                        WidthRequest="149"
+                        FontSize="15"
+                        Margin="0, 30, 11, 0"/>
+                </FlexLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

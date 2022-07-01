@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AplusXamarinApp.Page.InformationProjectPage.InformationContactsPage"
+             Visual="Default">
+    <ContentPage.Content>
+        
+
+        <StackLayout>
+            <StackLayout VerticalOptions="Center" Margin="0, 40, 0, 0">
+
+                <Entry Placeholder="Телефон №1" 
+                           PlaceholderColor="Gray"  
+                           x:Name="EPhoneOne" 
+                           TextColor="Black"
+                           Text="{Binding ProjectPhone}"
+                           BackgroundColor="#e8e8e8"
+                           HeightRequest="60"
+                           Margin="40, 10, 40, 0"
+                           Visual="Material"
+                           IsReadOnly="True"/>
+                <Entry Placeholder="E-mail"
+                           Margin="40,30,40,0"
+                           PlaceholderColor="Gray"
+                           TextColor="Black"
+                           Text="{Binding ProjectEmail}"
+                           x:Name="EEmail"                           
+                           BackgroundColor="#e8e8e8"
+                           HeightRequest="60"
+                           Visual="Material"
+                           IsReadOnly="True"/>
+
+                <Entry Placeholder="Адресс"
+                           Margin="40,30,40,0"
+                           PlaceholderColor="Gray"
+                           TextColor="Black"
+                           Text="{Binding ProjectAddress}"
+                           x:Name="EAddress"                          
+                           BackgroundColor="#e8e8e8"
+                           HeightRequest="60"
+                           Visual="Material"
+                           IsReadOnly="True"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

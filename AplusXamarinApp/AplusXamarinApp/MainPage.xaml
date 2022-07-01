@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AplusXamarinApp.MainPage"
+             NavigationPage.HasNavigationBar="False"
+             Visual="Default">
+    <ScrollView>
+        <FlexLayout>
+        <StackLayout>
+            <Frame CornerRadius="120" Padding="0"  IsClippedToBounds="True" HeightRequest="250" Margin="50, 0">
+                <Image Source="Logo.png"
+                       Margin="0,15,0,0"
+                       HorizontalOptions="Center" 
+                       HeightRequest="300" 
+                       WidthRequest="300"/>
+            </Frame>
+
+                <StackLayout VerticalOptions="Center" Margin="0, 70, 0, 0">
+                    <Entry Placeholder="Логин" 
+                           PlaceholderColor="Gray"  
+                           x:Name="ELogin" 
+                           TextColor="Black"
+                           Text="{Binding UserLogin}"
+                           BackgroundColor="#e8e8e8"
+                           HeightRequest="60"
+                           Margin="40, 30, 40, 0"
+                           Visual="Material"/>
+
+                    <Entry Placeholder="Пароль"
+                           Margin="40, 30, 40, 40"
+                           PlaceholderColor="Gray"
+                           TextColor="Black"
+                           Text="{Binding UserPassword}"
+                           x:Name="EPassword"
+                           IsPassword="True"
+                           BackgroundColor="#e8e8e8"
+                           HeightRequest="60"
+                           Visual="Material"/>
+                </StackLayout>
+            
+            <FlexLayout Direction="Row" JustifyContent="SpaceBetween" Margin="49, 40, 49, 40">
+                <Button Text="Зарегистрироватьтся" 
+                        CornerRadius="200" 
+                        BackgroundColor="#00b2ff" 
+                        TextColor="White" 
+                        x:Name="BRegistration" 
+                        Clicked="BRegistration_Clicked"
+                        HeightRequest="60"
+                        WidthRequest="149"
+                        FontSize="9"
+                        Margin="0,5,11,0"/>
+
+                <Button Text="Войти" 
+                        CornerRadius="200" 
+                        BackgroundColor="#00b2ff" 
+                        TextColor="White" 
+                        x:Name="BLogin" 
+                        Clicked="BLogin_Clicked"
+                        HeightRequest="60"
+                        WidthRequest="149"
+                        FontSize="9"
+                        Margin="11,5,0,0"/>
+            </FlexLayout>
+        </StackLayout>
+    </FlexLayout>
+    </ScrollView>
+</ContentPage>

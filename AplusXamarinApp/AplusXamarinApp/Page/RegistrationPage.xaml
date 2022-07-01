@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AplusXamarinApp.Page.RegistrationPage"
+             Title="
+             Регистрация"
+             Visual="Default">
+    <ContentPage.Content>
+        <FlexLayout Direction="Column" Margin="30">
+            <StackLayout>
+                <Entry BackgroundColor="#e8e8e8"
+                   Placeholder="Логин" 
+                   Margin="0,15,0,0" 
+                   HeightRequest="60"
+                   x:Name="ELogin"
+                   Text="{Binding UserLogin}"
+                   Visual="Material"/>
+
+                <Entry BackgroundColor="#e8e8e8"
+                   Placeholder="Email" 
+                  Margin="0,35,0,0"
+                   HeightRequest="60"
+                   x:Name="EEmail"
+                   Text="{Binding UserEmail}"
+                   Visual="Material"/>
+
+                <Entry BackgroundColor="#e8e8e8"
+                   Placeholder="Пароль" 
+                   Margin="0, 35,0,0" 
+                   HeightRequest="60"
+                   x:Name="EPassword"
+                   Text="{Binding UserPassword}"
+                   IsPassword="True"
+                   Visual="Material"/>
+
+                <Entry BackgroundColor="#e8e8e8"
+                   Placeholder="Пароль" 
+                   Margin="0,35,0,-40" 
+                   HeightRequest="60"
+                   x:Name="EReturnPassword"
+                   IsPassword="True"
+                   Visual="Material"/>
+
+            </StackLayout>
+
+            <StackLayout Margin="0,204,0,0">
+                <Button x:Name="BRegistration" 
+                        Text="Зарегистрироваться" 
+                        CornerRadius="200"
+                        BackgroundColor="#00b2ff"
+                        Clicked="BRegistration_Clicked"
+                        TextColor="White"/>
+            </StackLayout>
+        </FlexLayout>
+    </ContentPage.Content>
+</ContentPage>
